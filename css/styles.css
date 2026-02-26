@@ -225,6 +225,34 @@ h6 {
   color: #ffffff;
 }
 
+/* Nav links for light backgrounds (legal/support pages) */
+.nav-links-dark a {
+  color: #444444;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  transition: color var(--transition);
+}
+
+.nav-links-dark a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #444444;
+  transition: width var(--transition);
+}
+
+.nav-links-dark a:hover::after {
+  width: 100%;
+}
+
+.nav-links-dark a:hover {
+  color: var(--color-primary);
+}
+
 .navbar.scrolled .nav-links a {
   color: var(--color-text);
 }
