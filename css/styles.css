@@ -21,7 +21,8 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
   color: #333333;
   background-color: #faf8f5;
@@ -46,7 +47,12 @@ ol {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -67,8 +73,14 @@ h1, h2, h3, h4, h5, h6 {
   --color-text: #333333;
   --color-text-light: #666666;
   --color-footer-bg: #2a2a2a;
-  --gradient-hero: linear-gradient(135deg, #5c3d2e 0%, #8b6f5e 50%, #d4a574 100%);
-  --font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --gradient-hero: linear-gradient(
+    135deg,
+    #5c3d2e 0%,
+    #8b6f5e 50%,
+    #d4a574 100%
+  );
+  --font-stack:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
@@ -195,7 +207,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -275,13 +287,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Subtle decorative overlay */
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+  background: radial-gradient(
+    ellipse at 30% 20%,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 60%
+  );
   pointer-events: none;
 }
 
@@ -313,7 +329,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .app-store-badge {
   display: inline-block;
-  transition: transform var(--transition), opacity var(--transition);
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
 }
 
 .app-store-badge img {
@@ -378,7 +396,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 40px 32px;
   text-align: center;
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .feature-card:hover {
@@ -393,7 +413,11 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
   border-radius: var(--radius-md);
   font-size: 1.75rem;
   color: #ffffff;
@@ -452,7 +476,9 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .screenshot-item:nth-child(1) {
@@ -491,13 +517,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse at 70% 80%, rgba(255, 255, 255, 0.06) 0%, transparent 60%);
+  background: radial-gradient(
+    ellipse at 70% 80%,
+    rgba(255, 255, 255, 0.06) 0%,
+    transparent 60%
+  );
   pointer-events: none;
 }
 
@@ -536,15 +566,21 @@ h1, h2, h3, h4, h5, h6 {
 .footer-content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   gap: 40px;
   margin-bottom: 40px;
 }
 
+.footer-brand {
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+
 .footer-brand .nav-logo {
   display: inline-block;
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 .footer-brand p {
@@ -557,6 +593,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-links {
   display: flex;
   gap: 48px;
+  align-items: center;
 }
 
 .footer-links-column h4 {
@@ -759,7 +796,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .faq-question::after {
-  content: '+';
+  content: "+";
   font-size: 1.5rem;
   font-weight: 300;
   color: var(--color-primary-light);
@@ -769,14 +806,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .faq-item.active .faq-question::after {
-  content: '-';
+  content: "-";
   transform: rotate(180deg);
 }
 
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
+  transition:
+    max-height 0.4s ease,
+    padding 0.3s ease;
 }
 
 .faq-item.active .faq-answer {
@@ -837,7 +876,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.95rem;
   color: var(--color-text);
   background-color: #fafafa;
-  transition: border-color var(--transition), box-shadow var(--transition);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
   appearance: none;
   -webkit-appearance: none;
 }
@@ -944,7 +985,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 4px;
 }
 
-.info@media (max-width: 768px) {
+@media (max-width: 768px) {
   .support-info-grid {
     grid-template-columns: 1fr;
   }
@@ -971,7 +1012,9 @@ h1, h2, h3, h4, h5, h6 {
 .fade-in {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .fade-in.visible {
@@ -980,10 +1023,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Staggered animation delays for grids */
-.fade-in:nth-child(1) { transition-delay: 0s; }
-.fade-in:nth-child(2) { transition-delay: 0.1s; }
-.fade-in:nth-child(3) { transition-delay: 0.2s; }
-.fade-in:nth-child(4) { transition-delay: 0.3s; }
+.fade-in:nth-child(1) {
+  transition-delay: 0s;
+}
+.fade-in:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.fade-in:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.fade-in:nth-child(4) {
+  transition-delay: 0.3s;
+}
 
 /* Smooth hover transitions for interactive elements */
 @media (prefers-reduced-motion: reduce) {
@@ -1008,7 +1059,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tablet and below (max-width: 768px) */
 @media (max-width: 768px) {
-
   /* Navigation - mobile menu */
   .hamburger {
     display: flex;
@@ -1164,7 +1214,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Small mobile (max-width: 480px) */
 @media (max-width: 480px) {
-
   html {
     font-size: 15px;
   }
